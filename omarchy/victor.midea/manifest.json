@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "victor.midea",
+  "name": "Ar-condicionado Midea",
+  "version": "0.1.0",
+  "author": "Victor",
+  "description": "Estado e controle local do ar-condicionado Midea",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "Widget.qml"
+  },
+  "barWidget": {
+    "displayName": "Ar Midea",
+    "category": "Devices",
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "executable": "",
+      "refreshSeconds": 60
+    },
+    "schema": [
+      {
+        "key": "executable",
+        "type": "string",
+        "label": "Executável midea-desktop"
+      },
+      {
+        "key": "refreshSeconds",
+        "type": "number",
+        "label": "Intervalo de leitura (segundos, mínimo 30)"
+      }
+    ]
+  }
+}
