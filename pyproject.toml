@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "midea-desktop"
+version = "0.1.0"
+description = "Controle local e investigação de ar-condicionado Midea no Linux"
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+dependencies = ["msmart-ng==2026.9.0"]
+
+[project.scripts]
+midea-desktop = "midea_desktop.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=9,<10", "pytest-asyncio>=1,<2", "ruff>=0.17,<0.18"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/midea_desktop"]

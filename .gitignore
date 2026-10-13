@@ -1,0 +1,27 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+.env
+.env.*
+!.env.example
+config.json
+device.json
+device.*.json
+credentials.json
+secrets.json
+*.pem
+*.key
+*.p12
+*.pfx
+*.log
+backups/
+# Diário local da sessão: não publicar dados de operação doméstica.
+docs/investigation-log.md
+*.pcap
+*.pcapng
+*.jsonl
+captures/
+.impeccable/
